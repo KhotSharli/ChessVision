@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .left-panel {
+            background: white;
+            width: 1000px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .preview-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .preview {
+            width: 100%; 
+            max-width: 500px; 
+            height: auto;
+            object-fit: contain; 
+            cursor: pointer;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        .right-panel {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            width: 350px;
+        }
+        #detectedChessboard {
+            display: none;
+            width: 100%;
+            margin-top: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+        .buttons {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 >Upload PDF to Detect Chessboards</h1>
+    <div class="container">
+        <div class="left-panel">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" name="file" accept="application/pdf" required>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+            <div class="preview-container" id="previews"></div>
+        </div>
+        <div class="right-panel">
+            <h2>Detected Chessboard</h2>
+            <img id="detectedChessboard" alt="Detected Chessboard">
+            <div class="buttons">
+                <button id="startLichess" class="btn btn-primary" style="display:none;">Start Game on Lichess</button>
+                <button id="startChessCom" class="btn btn-danger" style="display:none;">Start Game on Chess.com</button>
+            </div>
+            <div id="error"></div>
+        </div>
+    </div>
+</body>
+
+    <script>
+        const uploadForm = document.getElementById('uploadForm');
+        const previewsDiv = document.getElementById('previews');
+        const errorDiv = document.getElementById('error');
+        const startLichessBtn = document.getElementById('startLichess');
+        const startChessComBtn = document.getElementById('startChessCom');
+    
+        let currentFen = '';
+    
+        uploadForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(uploadForm);
+    
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    errorDiv.innerText = data.error;
+                } else {
+                    previewsDiv.innerHTML = '';
+                    data.previews.forEach(preview => {
+                        const img = document.createElement('img');
+                        img.src = preview.preview_data;
+                        img.classList.add('preview');
+                        img.dataset.originalWidth = preview.original_width;
+                        img.dataset.originalHeight = preview.original_height;
+    
+                        img.addEventListener('click', function(event) {
+                            const rect = this.getBoundingClientRect();
+                            const clickX = event.clientX - rect.left;
+                            const clickY = event.clientY - rect.top;
+                            const dispWidth = rect.width;
+                            const dispHeight = rect.height;
+                            const origWidth = parseInt(this.dataset.originalWidth);
+                            const origHeight = parseInt(this.dataset.originalHeight);
+                            const previewData = this.src;
+    
+                            analyzeChessboard(previewData, origWidth, origHeight, clickX, clickY, dispWidth, dispHeight);
+                        });
+                        previewsDiv.appendChild(img);
+                    });
+                }
+            })
+            .catch(error => {
+                errorDiv.innerText = 'Error uploading file.';
+            });        
+        });
+    
+        function analyzeChessboard(previewData, origWidth, origHeight, clickX, clickY, dispWidth, dispHeight) {
+            // Calculate original coordinates
+            const scaleX = origWidth / dispWidth;
+            const scaleY = origHeight / dispHeight;
+            const origX = Math.round(clickX * scaleX);
+            const origY = Math.round(clickY * scaleY);
+    
+            fetch('/analyze', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    image: previewData,
+                    origX: origX,
+                    origY: origY
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.chessboard_url) {
+                    const chessboardImg = document.getElementById('detectedChessboard');
+                    chessboardImg.src = data.chessboard_url;
+                    chessboardImg.style.display = 'block';
+    
+                    currentFen = data.fen;
+                    startLichessBtn.style.display = 'inline';
+                    startChessComBtn.style.display = 'inline';
+                } else if (data.error) {
+                    errorDiv.innerText = data.error;
+                }
+            })
+            .catch(error => {
+                errorDiv.innerText = 'Analysis failed.';
+            });
+        }
+    
+        startLichessBtn.addEventListener('click', function() {
+            fetch('/start_game', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    site: 'lichess',
+                    fen: currentFen
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.redirect_url) {
+                    window.open(data.redirect_url, '_blank');
+                } else {
+                    errorDiv.innerText = data.error;
+                }
+            });
+        });
+    
+        startChessComBtn.addEventListener('click', function() {
+            fetch('/start_game', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    site: 'chess.com',
+                    fen: currentFen
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.redirect_url) {
+                    window.open(data.redirect_url, '_blank');
+                } else {
+                    errorDiv.innerText = data.error;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
