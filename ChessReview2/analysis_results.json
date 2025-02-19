@@ -1,0 +1,649 @@
+{
+    "analysis_results": {
+        "move_analysis": [
+            {
+                "move_number": 1,
+                "player": "White",
+                "move": "Nf3",
+                "evaluation": 0.21,
+                "evaluation_loss": 0.03,
+                "classification": "book"
+            },
+            {
+                "move_number": 2,
+                "player": "Black",
+                "move": "d6",
+                "evaluation": 0.49,
+                "evaluation_loss": 0.26,
+                "classification": "book"
+            },
+            {
+                "move_number": 3,
+                "player": "White",
+                "move": "d4",
+                "evaluation": 0.53,
+                "evaluation_loss": 0.05,
+                "classification": "book"
+            },
+            {
+                "move_number": 4,
+                "player": "Black",
+                "move": "g6",
+                "evaluation": 0.69,
+                "evaluation_loss": 0.17,
+                "classification": "book"
+            },
+            {
+                "move_number": 5,
+                "player": "White",
+                "move": "e4",
+                "evaluation": 0.61,
+                "evaluation_loss": 0.01,
+                "classification": "excellent"
+            },
+            {
+                "move_number": 6,
+                "player": "Black",
+                "move": "Bg7",
+                "evaluation": 0.53,
+                "evaluation_loss": 0.02,
+                "classification": "book"
+            },
+            {
+                "move_number": 7,
+                "player": "White",
+                "move": "e5",
+                "evaluation": -0.26,
+                "evaluation_loss": 0.78,
+                "classification": "inaccuracy"
+            },
+            {
+                "move_number": 8,
+                "player": "Black",
+                "move": "dxe5",
+                "evaluation": -0.31,
+                "evaluation_loss": 0.05,
+                "classification": "excellent"
+            },
+            {
+                "move_number": 9,
+                "player": "White",
+                "move": "dxe5",
+                "evaluation": -0.86,
+                "evaluation_loss": 0.65,
+                "classification": "good"
+            },
+            {
+                "move_number": 10,
+                "player": "Black",
+                "move": "Nd7",
+                "evaluation": 0.87,
+                "evaluation_loss": 1.71,
+                "classification": "miss"
+            },
+            {
+                "move_number": 11,
+                "player": "White",
+                "move": "Ng5",
+                "evaluation": -0.62,
+                "evaluation_loss": 1.35,
+                "classification": "inaccuracy"
+            },
+            {
+                "move_number": 12,
+                "player": "Black",
+                "move": "Bxe5",
+                "evaluation": -0.35,
+                "evaluation_loss": 0.23,
+                "classification": "excellent"
+            },
+            {
+                "move_number": 13,
+                "player": "White",
+                "move": "Qf3",
+                "evaluation": -1.18,
+                "evaluation_loss": 0.86,
+                "classification": "inaccuracy"
+            },
+            {
+                "move_number": 14,
+                "player": "Black",
+                "move": "f6",
+                "evaluation": 5.11,
+                "evaluation_loss": 6.25,
+                "classification": "blunder"
+            },
+            {
+                "move_number": 15,
+                "player": "White",
+                "move": "Ne6",
+                "evaluation": 5.23,
+                "evaluation_loss": 0.4,
+                "classification": "excellent"
+            },
+            {
+                "move_number": 16,
+                "player": "Black",
+                "move": "Nc5",
+                "evaluation": 6.66,
+                "evaluation_loss": 1.47,
+                "classification": "good"
+            },
+            {
+                "move_number": 17,
+                "player": "White",
+                "move": "Nxd8",
+                "evaluation": 6.75,
+                "evaluation_loss": 0.0,
+                "classification": "best"
+            },
+            {
+                "move_number": 18,
+                "player": "Black",
+                "move": "Kxd8",
+                "evaluation": 6.84,
+                "evaluation_loss": 0.08,
+                "classification": "best"
+            },
+            {
+                "move_number": 19,
+                "player": "White",
+                "move": "Qd5+",
+                "evaluation": 6.42,
+                "evaluation_loss": 0.19,
+                "classification": "best"
+            },
+            {
+                "move_number": 20,
+                "player": "Black",
+                "move": "Nd7",
+                "evaluation": 6.42,
+                "evaluation_loss": 0.3,
+                "classification": "best"
+            },
+            {
+                "move_number": 21,
+                "player": "White",
+                "move": "Bc4",
+                "evaluation": 6.06,
+                "evaluation_loss": 0.31,
+                "classification": "best"
+            },
+            {
+                "move_number": 22,
+                "player": "Black",
+                "move": "c6",
+                "evaluation": 6.09,
+                "evaluation_loss": 0.16,
+                "classification": "best"
+            },
+            {
+                "move_number": 23,
+                "player": "White",
+                "move": "Qd1",
+                "evaluation": 6.01,
+                "evaluation_loss": 0.01,
+                "classification": "best"
+            },
+            {
+                "move_number": 24,
+                "player": "Black",
+                "move": "b5",
+                "evaluation": 6.37,
+                "evaluation_loss": 0.36,
+                "classification": "best"
+            },
+            {
+                "move_number": 25,
+                "player": "White",
+                "move": "Bf7",
+                "evaluation": 5.93,
+                "evaluation_loss": 0.4,
+                "classification": "best"
+            },
+            {
+                "move_number": 26,
+                "player": "Black",
+                "move": "f5",
+                "evaluation": 5.86,
+                "evaluation_loss": 0.03,
+                "classification": "best"
+            },
+            {
+                "move_number": 27,
+                "player": "White",
+                "move": "Be6",
+                "evaluation": 5.92,
+                "evaluation_loss": 0.12,
+                "classification": "best"
+            },
+            {
+                "move_number": 28,
+                "player": "Black",
+                "move": "Nf6",
+                "evaluation": 5.74,
+                "evaluation_loss": 0.03,
+                "classification": "best"
+            },
+            {
+                "move_number": 29,
+                "player": "White",
+                "move": "Bg5",
+                "evaluation": 5.35,
+                "evaluation_loss": 0.38,
+                "classification": "best"
+            },
+            {
+                "move_number": 30,
+                "player": "Black",
+                "move": "Bxb2",
+                "evaluation": 5.43,
+                "evaluation_loss": 0.2,
+                "classification": "best"
+            },
+            {
+                "move_number": 31,
+                "player": "White",
+                "move": "Bxd7",
+                "evaluation": 5.14,
+                "evaluation_loss": 0.31,
+                "classification": "best"
+            },
+            {
+                "move_number": 32,
+                "player": "Black",
+                "move": "Nxd7",
+                "evaluation": 5.73,
+                "evaluation_loss": 0.6,
+                "classification": "excellent"
+            },
+            {
+                "move_number": 33,
+                "player": "White",
+                "move": "Nd2",
+                "evaluation": 5.41,
+                "evaluation_loss": 0.19,
+                "classification": "best"
+            },
+            {
+                "move_number": 34,
+                "player": "Black",
+                "move": "Bxa1",
+                "evaluation": 5.91,
+                "evaluation_loss": 0.38,
+                "classification": "best"
+            },
+            {
+                "move_number": 35,
+                "player": "White",
+                "move": "Qxa1",
+                "evaluation": 5.84,
+                "evaluation_loss": 0.07,
+                "classification": "best"
+            },
+            {
+                "move_number": 36,
+                "player": "Black",
+                "move": "Re8",
+                "evaluation": 5.81,
+                "evaluation_loss": 0.15,
+                "classification": "best"
+            },
+            {
+                "move_number": 37,
+                "player": "White",
+                "move": "O-O",
+                "evaluation": 5.78,
+                "evaluation_loss": 0.23,
+                "classification": "best"
+            },
+            {
+                "move_number": 38,
+                "player": "Black",
+                "move": "Rb8",
+                "evaluation": 6.15,
+                "evaluation_loss": 0.34,
+                "classification": "best"
+            },
+            {
+                "move_number": 39,
+                "player": "White",
+                "move": "c4",
+                "evaluation": 5.64,
+                "evaluation_loss": 0.74,
+                "classification": "excellent"
+            },
+            {
+                "move_number": 40,
+                "player": "Black",
+                "move": "bxc4",
+                "evaluation": 5.9,
+                "evaluation_loss": 0.23,
+                "classification": "best"
+            },
+            {
+                "move_number": 41,
+                "player": "White",
+                "move": "Nxc4",
+                "evaluation": 6.22,
+                "evaluation_loss": 0.28,
+                "classification": "best"
+            },
+            {
+                "move_number": 42,
+                "player": "Black",
+                "move": "Ba6",
+                "evaluation": 6.21,
+                "evaluation_loss": 0.05,
+                "classification": "best"
+            },
+            {
+                "move_number": 43,
+                "player": "White",
+                "move": "Rc1",
+                "evaluation": 5.41,
+                "evaluation_loss": 1.01,
+                "classification": "excellent"
+            },
+            {
+                "move_number": 44,
+                "player": "Black",
+                "move": "Rb4",
+                "evaluation": 6.94,
+                "evaluation_loss": 1.57,
+                "classification": "good"
+            },
+            {
+                "move_number": 45,
+                "player": "White",
+                "move": "Na5",
+                "evaluation": 7.51,
+                "evaluation_loss": 0.33,
+                "classification": "best"
+            },
+            {
+                "move_number": 46,
+                "player": "Black",
+                "move": "Rb6",
+                "evaluation": 8.08,
+                "evaluation_loss": 0.71,
+                "classification": "excellent"
+            },
+            {
+                "move_number": 47,
+                "player": "White",
+                "move": "Nxc6+",
+                "evaluation": 7.87,
+                "evaluation_loss": 0.12,
+                "classification": "best"
+            },
+            {
+                "move_number": 48,
+                "player": "Black",
+                "move": "Kc7",
+                "evaluation": 8.24,
+                "evaluation_loss": 0.21,
+                "classification": "best"
+            },
+            {
+                "move_number": 49,
+                "player": "White",
+                "move": "Nxe7+",
+                "evaluation": 7.64,
+                "evaluation_loss": 0.61,
+                "classification": "best"
+            },
+            {
+                "move_number": 50,
+                "player": "Black",
+                "move": "Kb8",
+                "evaluation": 7.93,
+                "evaluation_loss": 0.13,
+                "classification": "best"
+            },
+            {
+                "move_number": 51,
+                "player": "White",
+                "move": "Be3",
+                "evaluation": 6.98,
+                "evaluation_loss": 0.82,
+                "classification": "excellent"
+            },
+            {
+                "move_number": 52,
+                "player": "Black",
+                "move": "Re6",
+                "evaluation": 7.37,
+                "evaluation_loss": 0.34,
+                "classification": "best"
+            },
+            {
+                "move_number": 53,
+                "player": "White",
+                "move": "Nc6+",
+                "evaluation": 6.52,
+                "evaluation_loss": 0.8,
+                "classification": "excellent"
+            },
+            {
+                "move_number": 54,
+                "player": "Black",
+                "move": "Kc8",
+                "evaluation": 9.21,
+                "evaluation_loss": 2.42,
+                "classification": "good"
+            },
+            {
+                "move_number": 55,
+                "player": "White",
+                "move": "Nd4+",
+                "evaluation": 9.82,
+                "evaluation_loss": 0.29,
+                "classification": "best"
+            },
+            {
+                "move_number": 56,
+                "player": "Black",
+                "move": "Kd8",
+                "evaluation": 11.46,
+                "evaluation_loss": 1.77,
+                "classification": "excellent"
+            },
+            {
+                "move_number": 57,
+                "player": "White",
+                "move": "Nxe6+",
+                "evaluation": 99.78,
+                "evaluation_loss": 86.69,
+                "classification": "miss"
+            },
+            {
+                "move_number": 58,
+                "player": "Black",
+                "move": "Rxe6",
+                "evaluation": 99.79,
+                "evaluation_loss": 0.0,
+                "classification": "miss"
+            },
+            {
+                "move_number": 59,
+                "player": "White",
+                "move": "Qh8+",
+                "evaluation": 99.8,
+                "evaluation_loss": 0.01,
+                "classification": "best"
+            },
+            {
+                "move_number": 60,
+                "player": "Black",
+                "move": "Re8",
+                "evaluation": 99.97,
+                "evaluation_loss": 87.47,
+                "classification": "miss"
+            },
+            {
+                "move_number": 61,
+                "player": "White",
+                "move": "Qd4",
+                "evaluation": 8.68,
+                "evaluation_loss": 91.29,
+                "classification": "miss"
+            },
+            {
+                "move_number": 62,
+                "player": "Black",
+                "move": "Bc8",
+                "evaluation": 99.97,
+                "evaluation_loss": 90.9,
+                "classification": "miss"
+            },
+            {
+                "move_number": 63,
+                "player": "White",
+                "move": "Bg5+",
+                "evaluation": 99.98,
+                "evaluation_loss": 0.01,
+                "classification": "miss"
+            },
+            {
+                "move_number": 64,
+                "player": "Black",
+                "move": "Re7",
+                "evaluation": 99.98,
+                "evaluation_loss": 0.0,
+                "classification": "miss"
+            },
+            {
+                "move_number": 65,
+                "player": "White",
+                "move": "Qh8+",
+                "evaluation": 99.98,
+                "evaluation_loss": 0.0,
+                "classification": "miss"
+            },
+            {
+                "move_number": 66,
+                "player": "Black",
+                "move": "Nf8",
+                "evaluation": 99.98,
+                "evaluation_loss": 0.0,
+                "classification": "miss"
+            },
+            {
+                "move_number": 67,
+                "player": "White",
+                "move": "Qxf8+",
+                "evaluation": 99.99,
+                "evaluation_loss": 0.01,
+                "classification": "miss"
+            },
+            {
+                "move_number": 68,
+                "player": "Black",
+                "move": "Kd7",
+                "evaluation": 99.99,
+                "evaluation_loss": 0.0,
+                "classification": "miss"
+            },
+            {
+                "move_number": 69,
+                "player": "White",
+                "move": "Qxe7#",
+                "evaluation": 100.0,
+                "evaluation_loss": 0.01,
+                "classification": "miss"
+            }
+        ],
+        "phase_analysis": {
+            "opening": {
+                "rating": "brilliant",
+                "move_count": 5
+            },
+            "middlegame": {
+                "rating": "best",
+                "move_count": 64
+            }
+        },
+        "player_summaries": {
+            "GTRismine": {
+                "brilliant": 0,
+                "great": 0,
+                "best": 17,
+                "excellent": 6,
+                "good": 1,
+                "inaccuracy": 3,
+                "mistake": 0,
+                "miss": 6,
+                "blunder": 0,
+                "book": 2,
+                "forced": 0
+            },
+            "siddu2222": {
+                "brilliant": 0,
+                "great": 0,
+                "best": 15,
+                "excellent": 5,
+                "good": 3,
+                "inaccuracy": 0,
+                "mistake": 0,
+                "miss": 7,
+                "blunder": 1,
+                "book": 3,
+                "forced": 0
+            }
+        },
+        "game_info": {
+            "Event": "Live Chess",
+            "Site": "Chess.com",
+            "Date": "2025.01.24",
+            "Round": "?",
+            "White": "GTRismine",
+            "Black": "siddu2222",
+            "Result": "1-0",
+            "TimeControl": "600",
+            "WhiteElo": "615",
+            "BlackElo": "556",
+            "Termination": "GTRismine won by checkmate",
+            "ECO": "B06",
+            "EndTime": "6:16:40 PST",
+            "Link": "https://www.chess.com/game/live/131466039507",
+            "Moves": [
+                "1. Nf3 d6",
+                "2. d4 g6",
+                "3. e4 Bg7",
+                "4. e5 dxe5",
+                "5. dxe5 Nd7",
+                "6. Ng5 Bxe5",
+                "7. Qf3 f6",
+                "8. Ne6 Nc5",
+                "9. Nxd8 Kxd8",
+                "10. Qd5+ Nd7",
+                "11. Bc4 c6",
+                "12. Qd1 b5",
+                "13. Bf7 f5",
+                "14. Be6 Nf6",
+                "15. Bg5 Bxb2",
+                "16. Bxd7 Nxd7",
+                "17. Nd2 Bxa1",
+                "18. Qxa1 Re8",
+                "19. O-O Rb8",
+                "20. c4 bxc4",
+                "21. Nxc4 Ba6",
+                "22. Rc1 Rb4",
+                "23. Na5 Rb6",
+                "24. Nxc6+ Kc7",
+                "25. Nxe7+ Kb8",
+                "26. Be3 Re6",
+                "27. Nc6+ Kc8",
+                "28. Nd4+ Kd8",
+                "29. Nxe6+ Rxe6",
+                "30. Qh8+ Re8",
+                "31. Qd4 Bc8",
+                "32. Bg5+ Re7",
+                "33. Qh8+ Nf8",
+                "34. Qxf8+ Kd7",
+                "35. Qxe7#"
+            ]
+        }
+    }
+}
